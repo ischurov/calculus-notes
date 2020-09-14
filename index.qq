@@ -1,0 +1,15 @@
+\meta
+    \title Математический анализ
+    \subtitle Записки лекций
+    \author
+        Илья Щуров
+        \affiliation
+            НИУ ВШЭ
+    \link
+        Курс ВШЭ-РЭШ
+        \role course
+        \url http://math-info.hse.ru/s20/3    
+    \lang ru
+\_include chapter01.qq
+\_include chapter02.qq
+\_include chapter03.qq
