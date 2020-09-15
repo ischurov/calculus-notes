@@ -9,6 +9,13 @@
         Курс ВШЭ-РЭШ
         \role course
         \url http://math-info.hse.ru/s20/3    
+    \link
+        Исходный код
+        \role source
+        \url https://github.com/ischurov/calculus-notes
+    \link
+        Telegram-канал
+        \url https://t.me/calculuswithoutcats
     \lang ru
 \_include chapter01.qq
 \_include chapter02.qq
