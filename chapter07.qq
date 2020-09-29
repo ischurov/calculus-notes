@@ -106,7 +106,7 @@
 Приведём пример ещё одной неопределенности: $(\infty)+(\infty)$. (Я взял каждую
 из бесконечностей в скобки, чтобы подчеркнуть, что это «бесконечности без
 знака».) Действительно, пусть мы знаем, что $a_n \to \infty$ и $b_n \to \infty$.
-Что можно сказать про $\lim_{n\to \infty}(a_n + b_n)$? Оно может равняться чему
+Что можно сказать про $\lim_{n\to \infty}(a_n + b_n)$? Он может равняться чему
 угодно:
 
 \itemize
@@ -144,9 +144,9 @@
     \paragraph{Нам дано}
     \align 
         \item \label eq:07:plusinfty1
-            \forall C_1 \\ \exists N=N_1(C_1)\\ \forall n > N  \colon &a_n > C_1;
+            \forall C_1 \\ \exists N=N_1(C_1)\\ \forall n > N  \colon &\\ a_n > C_1;
         \item \label eq:07:plusinfty2
-            \forall C_2 \\ \exists N=N_2(C_2)\\ \forall n > N  \colon & b_n > C_2.
+            \forall C_2 \\ \exists N=N_2(C_2)\\ \forall n > N  \colon &\\  b_n > C_2.
     \paragraph{Хотим получить}
     \eq
         \forall C \\ \exists N=N(C)\\ \forall n > N\colon a_n + b_n > C.
@@ -189,7 +189,7 @@
 \subsection Деление на ноль и на бесконечность
 Рассмотрим ещё пару примеров, связанных с делением.
 \proposition
-    Пусть $a_n \to \infty$. Тогда $1/a_n\to 0$. Неформально можно
+    Пусть $a_n \to \infty$. Тогда $\frac{1}{a_n}\to 0$. Неформально можно
     записать так: $\frac{1}{\infty}=0$.
 \proof
     Ну, как обычно.
@@ -201,7 +201,7 @@
     \eq
         \forall \eps>0\\ \exists N=N(\eps)\\ \forall n>N\colon |1/a_n|<\eps.
 
-    Теперь можно доказывать. Для всякого $\eps>0$ положим $С:=1/\eps$. Возьмём
+    Теперь можно доказывать. Для всякого $\eps>0$ положим $C:=1/\eps$. Возьмём
     $N:=N_1(1/\eps)$. Тогда для всех $n>N$:
     \eq
         |a_n| > C=\frac{1}{\eps}.
