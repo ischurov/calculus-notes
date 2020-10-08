@@ -143,7 +143,7 @@
         \forall C \in \mathbb R\\ \exists N=N(C)\\ \forall n>N\colon a_n < C.
     Пишут:
     \eq
-        \lim_{n\to \infty} a_n = +\infty
+        \lim_{n\to \infty} a_n = -\infty
     или
     \eq
         a_n \to -\infty\text{ при } n \to \infty.
