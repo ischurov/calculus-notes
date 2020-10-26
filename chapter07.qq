@@ -188,7 +188,7 @@
 
 \subsection Деление на ноль и на бесконечность
 Рассмотрим ещё пару примеров, связанных с делением.
-\proposition
+\proposition \label prop:07:1/infty
     Пусть $a_n \to \infty$. Тогда $\frac{1}{a_n}\to 0$. Неформально можно
     записать так: $\frac{1}{\infty}=0$.
 \proof

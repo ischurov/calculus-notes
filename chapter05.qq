@@ -1,5 +1,5 @@
 \chapter Свойства пределов \label chap:05:lim-properties
-\section Пределы и ограниченность
+\section Пределы и ограниченность \label sec:05:lim-bound
 \subsection Сходящаяся последовательность ограничена
 \theorem \label thm:05:bound
     Пусть последовательность $\seq{a_n}$ сходится (то есть имеет предел). Тогда
