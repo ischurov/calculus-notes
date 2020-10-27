@@ -40,7 +40,7 @@
 
     Формально:
     \eq
-        \forall \seq{x_n}\colon ((\forall n\colon x_n \ne 0) \wedge (\lim_{n\to
+        \forall \seq{x_n}\colon ((\forall n\colon x_n \ne x_0) \wedge (\lim_{n\to
         \infty} x_n = x_0)) \Rightarrow \lim_{n \to \infty} f(x_n)=b.
 
 Это определение эквивалентно предыдущему (это мы чуть позже докаже) и хорошо
