@@ -51,7 +51,7 @@
 
 
 \section Ограниченность
-\theorem
+\theorem \label thm:14:bound-seg
     Пусть функция $f$ непрерывна на отрезке $[a, b]$. Тогда она ограниченна
     на этом отрезке.
 \remark \nonumber
