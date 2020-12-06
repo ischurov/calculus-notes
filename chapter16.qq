@@ -19,9 +19,9 @@
     Воспользуемся \snref[определением производной]:
     \align \nonumber
         \item 
-            h'(x_0)&=\lim_{\Delta x \to 0} \frac{h(x_0 + \Delta x)}{\Delta x}=
+            h'(x_0)&=\lim_{\Delta x \to 0} \frac{h(x_0 + \Delta x)-h(x_0)}{\Delta x}=
         \item &=\lim_{\Delta x \to 0} 
-            \frac{(f(x_0+\Delta x) + g(x_0 + \Delta)) x - (f(x_0)+g(x_0))}{\Delta x}=\ldots
+            \frac{(f(x_0+\Delta x) + g(x_0 + \Delta)) - (f(x_0)+g(x_0))}{\Delta x}=\ldots
     Перегруппируем слагаемые в числителе и разобъём дробь на две:
     \eq
         \ldots = \lim_{\Delta x \to 0} \left(\frac{f(x_0+\Delta x) - f(x_0)}{\Delta x}

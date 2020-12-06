@@ -375,7 +375,7 @@ $\lim_{x\to x_0} f(x)$ и тоже равен числу $b$. (См.
 \proof
     Предел
     \eq
-        \lim_{x\to x_0} = \lim_{x\to x_0} g(f(x))
+        \lim_{x\to x_0} h(x) = \lim_{x\to x_0} g(f(x))
     удовлетворяет условию теоремы. Значит,
     \eq
         \lim_{x\to x_0} g(f(x))=g(\lim_{x\to x_0} f(x))=g(f(x_0))=h(x_0),
