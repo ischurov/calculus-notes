@@ -350,7 +350,7 @@ $f(h(x))h'(x)$, то есть действительно принадлежит 
             t = np.linspace(-0.5, 3.6, 200)
             t_clip = np.linspace(0, np.pi)
             ax1.plot(t, np.sin(t), label='$y=sin(t)$')
-            ax1.fill_between(t_clip, np.sin(t_clip))
+            ax1.fill_between(t_clip, np.sin(t_clip), alpha=0.5)
             ob.center_spines(grid=False, minor_ticks=False, ax=ax1)
             ob.settle_axes(xmin=-0.5, xmax=3.6, ymin=-1.2, ymax=1.2, 
                            xlabel="t", ylabel="y", ax=ax1) 
@@ -362,7 +362,7 @@ $f(h(x))h'(x)$, то есть действительно принадлежит 
             x = np.linspace(-0.5, 3.6, 200)
             x_clip = np.linspace(0, np.pi / 2)
             ax2.plot(x, np.sin(2 * x), label='$y=sin(2x)$')
-            ax2.fill_between(x_clip, np.sin(2 * x_clip))
+            ax2.fill_between(x_clip, np.sin(2 * x_clip), alpha=0.5)
             ax2.legend()
             ob.center_spines(grid=False, minor_ticks=False, ax=ax2)
             ob.settle_axes(xmin=-0.5, xmax=3.6, ymin=-1.2, ymax=1.2, 
