@@ -46,6 +46,14 @@
     шоколадку, вы не съедите. Значит, сумма съеденных кусочков стремится к
     единице.
 
+    \figure
+        \img
+            \src series-1.svg
+            \style
+                padding: 1em; max-width: 450px;
+        \caption
+            Сумма бесконечной геометрической прогрессии «на шоколадках»
+
 \example 
     Ряд
     \eq
@@ -290,6 +298,30 @@
     то есть у частичных сумм гармонического ряда есть «логарифмическая
     асимптота» (асимптота вида $y=\ln n + \gamma$).
 
+    \figure \showcode \collapsed
+        \pythonfigure \style max-width: 500px;
+            def harmonic(n):
+                # reverse order for better precision
+                return sum(1 / k for k in range(n, 0, -1))
+            gamma = 0.57721566490153286060
+            # From Wikipedia: https://en.wikipedia.org/wiki/Euler–Mascheroni_constant
+
+            N = range(1, 10)
+            plt.plot(N, [harmonic(n) for n in N], 'o', 
+                     label=r'частичные суммы гармонического ряда')
+            
+            x = np.linspace(0.1, max(N) + 1, 301)
+            plt.plot(x, np.log(x) + gamma, label=r'$y=\ln x + \gamma$')
+            plt.yticks([1, 2, 3])
+            plt.xticks(N)
+            plt.legend()
+
+            ob.center_spines(grid=False, minor_ticks=False)
+            ob.settle_axes(xmin=-0.5, xmax=max(N) + 1, ymin=-0.2, ymax=4.2, 
+                           xlabel="x", ylabel="y")
+        \caption
+            Логарифмическая асимптота для частичных сумм гармонического ряда
+
 \subsection Признак сравнения
 Ну хорошо, у нас есть необходимое условие сходимости — может быть, есть и
 какие-то достаточные? Да, есть.
@@ -370,11 +402,61 @@
     \equation \label eq:28:intf
         \int_1^\infty f(x)\, dx.
 \proof
-    \paragraph{Если интеграл сходится, то и ряд тоже сходится.} Построим график
+    \paragraph{Если интеграл сходится, то и ряд тоже сходится} Построим график
     функции $y=f(x)$. Мы хотим представить сумму ряда \ref{eq:28:sumf} в виде
     некоторой площади, чтобы сравнить её с площадью, которая соответствует
     интегралу \ref{eq:28:intf}. Для этого над каждым отрезком $[k-1, k]$
-    построим прямоугольник высотой $f(k)$, $k=1,2,\ldots$.  Площадь $k$-го
+    построим прямоугольник высотой $f(k)$, $k=1,2,\ldots$. 
+
+    \figure
+        \pythonvideo \jsanimate
+            def reset_offsets(camera):
+                # We teak celluloid to keep all the artists
+                for dct in camera._offsets.values():
+                    for k in dct:
+                        dct[k] = 0
+
+            def snap_n_reset(camera):
+                camera.snap()
+                reset_offsets(camera)
+
+            fig, ax1 = plt.subplots()
+            camera = Camera(fig)
+            def f(x):
+                return np.cos(x / 4) + 1
+
+            xmax = 11
+            x = np.linspace(1, xmax, 301)
+            x_int = np.arange(1, xmax + 1)
+            ax1.plot(x, f(x), label='$y=f(x)$', color='C0')
+            ax1.fill_between(x,f(x), alpha=0.5)
+
+            ax1.plot(x_int, f(x_int), 'o', color='C0')
+
+            snap_n_reset(camera)
+
+            points = []
+            for x in range(0, xmax):
+                points = [(x, 0), (x, f(x + 1)), (x + 1, f(x + 1)), (x + 1, 0)]
+                ax1.plot(*zip(*points), color='C1')
+                ax1.fill_between(*zip(*points), alpha=0.3, color='C1')
+                snap_n_reset(camera)
+
+            ob.center_spines(grid=False, minor_ticks=False, ax=ax1)
+            ob.settle_axes(xmin=-0.5, xmax=xmax - 0.2, ymin=-0.2, ymax=2.2, 
+                           xlabel="x", ylabel="y", ax=ax1)
+            ax1.legend()
+            ax1.set_xticks(range(xmax))
+            ax1.set_yticks([])
+
+            animation = camera.animate(interval=300)
+        \caption
+            Интеграл оценивает сумму ряда, начиная со второго слагаемого
+        \label
+            fig:28:integral-larger-than-series
+
+
+    Площадь $k$-го
     прямоугольника равна $f(k)$, сумма всех площадей равна сумме ряда. Все
     прямогольники, кроме первого, находятся не выше графика функции: в силу
     неубывания на каждом отрезке $[k-1, k]$ значение функции не меньше $f(k)$.
@@ -404,6 +486,53 @@
     построить прямоугольник высотой $f(k)$. Теперь верхние стороны наших
     прямуогльники будут ограничивать график функции $y=f(x)$ сверху, и из
     сходимости ряда будет следовать сходимость интеграла.
+
+    \figure
+        \pythonvideo \jsanimate
+            def reset_offsets(camera):
+                # We teak celluloid to keep all the artists
+                for dct in camera._offsets.values():
+                    for k in dct:
+                        dct[k] = 0
+
+            def snap_n_reset(camera):
+                camera.snap()
+                reset_offsets(camera)
+
+            fig, ax1 = plt.subplots()
+            camera = Camera(fig)
+            def f(x):
+                return np.cos(x / 4) + 1
+
+            xmax = 11
+            x = np.linspace(1, xmax, 301)
+            x_int = np.arange(1, xmax + 1)
+            ax1.plot(x, f(x), label='$y=f(x)$', color='C0')
+            ax1.fill_between(x,f(x), alpha=0.5)
+
+            ax1.plot(x_int, f(x_int), 'o', color='C0')
+
+            snap_n_reset(camera)
+
+            points = []
+            for x in range(1, xmax):
+                points = [(x, 0), (x, f(x)), (x + 1, f(x)), (x + 1, 0)]
+                ax1.plot(*zip(*points), color='C1')
+                ax1.fill_between(*zip(*points), alpha=0.3, color='C1')
+                snap_n_reset(camera)
+
+            ob.center_spines(grid=False, minor_ticks=False, ax=ax1)
+            ob.settle_axes(xmin=-0.5, xmax=xmax - 0.2, ymin=-0.2, ymax=2.2, 
+                           xlabel="x", ylabel="y", ax=ax1)
+            ax1.legend()
+            ax1.set_xticks(range(xmax))
+            ax1.set_yticks([])
+
+            animation = camera.animate(interval=300)
+        \caption
+            Сумма ряда оценивает интеграл сверху
+        \label
+            fig:28:series-larger-than-integral
 
     Формально, можно записать:
     \equation \label eq:28:sumint-right
@@ -470,7 +599,7 @@
 \proof
     Обозначим частичные суммы ряда через $S_n$. Тогда $S_1=a_1$, $S_2=a_1 -
     a_2$, $S_3 = a_1 - a_2 + a_3$ и т.д. Будем откладывать эти точки на числовой
-    прямой.
+    прямой, см. \ref[рис.][fig:28:alt].
 
     Вот мы отложили точку $S_1$. Затем нужно сдвинуться влево на $a_2$, чтобы
     получить $S_2$. Отсюда нужно сдвинуться вправо на $a_3$, чтобы получить
@@ -478,6 +607,16 @@
     что последовательность $a_k$ невозрастает, и значит $a_3 \le a_2$, то есть
     сдвиг от $S_2$ до $S_3$ не превосходит длину отрезка $[S_2, S_1]$. Значит
     точка $S_3$ лежит в отрезке $[S_2, S_1]$.
+
+    \figure
+        \img
+            \src series-2.svg
+            \style
+                padding: 1em; max-width: 550px;
+        \caption
+            Частичные суммы знакочередующегося ряда с убывающими членами
+        \label
+            fig:28:alt
 
     Следующий шаг должен быть влево, и поскольку $a_4 \le a_3$, точка $S_4$
     лежит на отрезке $[S_2, S_3]$. И так далее.
