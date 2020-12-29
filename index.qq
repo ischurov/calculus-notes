@@ -17,6 +17,21 @@
         Telegram-канал
         \url https://t.me/calculuswithoutcats
     \lang ru
+    \preamble
+        \newcommand{\ph}{\varphi}
+        \newcommand{\eps}{\varepsilon}
+        \newcommand{\padi}[2]{\frac{\partial #1}{\partial #2}}
+        \newcommand{\mb}{\mathbf}
+        \newcommand{\re}{\mathop{\mathrm{Re}}}
+        \newcommand{\im}{\mathop{\mathrm{Im}}}
+        \newcommand{\set}[1]{\\{#1\\}}
+        \newcommand{\largeset}[1]{\left\\{#1\right\\}}
+        \newcommand{\seq}[1]{\\{#1\\}}
+        \newcommand{\largeseq}[1]{\left\\{#1\right\\}}
+        \newcommand{\UB}{\mathop{\mathrm{UB}}}
+        \newcommand{\LB}{\mathop{\mathrm{LB}}}
+        \newcommand{\Arg}{\mathop{\mathrm{Arg}}}
+        \newcommand{\Ln}{\mathop{\mathrm{Ln}}}
 \_include chapter01.qq
 \_include chapter02.qq
 \_include chapter03.qq
@@ -45,3 +60,4 @@
 \_include chapter26.qq
 \_include chapter27.qq
 \_include chapter28.qq
+\_include chapter29.qq

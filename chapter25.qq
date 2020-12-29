@@ -173,7 +173,7 @@ $t$. Обозначим эту функцию через $G(t)$.
     интеграла (см. \ref{eq:24:additivity}),
     \eq
         \int_a^{x_0+\Delta x} f(x)\, dx = \int_a^{x_0} f(x)\, dx +
-        \int_{x_0}^{\Delta x} f(x)\, dx.
+        \int_{x_0}^{x_0 + \Delta x} f(x)\, dx.
     Подставляя это разложение в \ref{eq:25:dG}, имеем:
     \equation \label eq:25:intx0
         G(x_0 + \Delta x) - G(x_0) = \int_{x_0}^{x_0 + \Delta x} f(x)\, dx.
