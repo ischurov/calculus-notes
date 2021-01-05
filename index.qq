@@ -6,7 +6,7 @@
         \affiliation
             НИУ ВШЭ
     \link
-        Курс ВШЭ-РЭШ
+        Дополнительные материалы
         \role course
         \url http://math-info.hse.ru/s20/3    
     \link
@@ -16,6 +16,12 @@
     \link
         Telegram-канал
         \url https://t.me/calculuswithoutcats
+    \link
+        Другие учебники
+        \url http://mathbook.info/
+    \link
+        Хочу бумажную книгу!
+        \url http://mathbook.info/#subscribe
     \lang ru
     \preamble
         \newcommand{\ph}{\varphi}

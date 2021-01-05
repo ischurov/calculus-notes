@@ -443,7 +443,7 @@ $a$, если её члены с ростом $n$ становятся всё б
 \figure
     \img
         \style
-            padding: 4em; max-width:500px;
+            padding: 1em; max-width:500px;
         \src lim-seq-1.svg
         \alt
             Нарисована числовая прямая, на ней отмечены две точки: a = -1 и b =
@@ -474,9 +474,10 @@ $\eps$-близки, если модуль их разности меньше $\
     находятся на расстоянии меньше $\eps$ от $A$.
 
     Формально это записывается так:
-    \equation \label eq:04:tail
-        \exists N\in \mathbb N\\ \forall n \in \mathbb N\colon (n > N)
-        \Rightarrow |a_n - A| < \eps.
+    \gather
+        \item \label eq:04:tail
+            \exists N\in \mathbb N\\ \forall n \in \mathbb N\colon (n > N) \Rightarrow 
+        \splitem \splonly{\Rightarrow} |a_n - A| < \eps.
     Здесь сказано, что найдётся такой номер $N$, что все члены
     последовательности с номерами от $N+1$ и больше находятся на расстоянии
     меньше $\eps$ от $A$. 
@@ -504,7 +505,7 @@ $N$, могут как принадлежать коридору, так и вы
     \img
         \src lim-seq-2.svg
         \style
-            padding: 4em;
+            padding: 1em;
         \alt
             Изображен график последовательности. На вертикальной оси отмечено
             число A и проведено три горизонтальных прямых: y=A, y=A+ε,
@@ -713,9 +714,9 @@ $\eps$ от $A$».
     \equation \label eq:04:frac
         \left|\frac{n+1}{n}-1\right|<\eps.
     Преобразуем это неравенство:
-    \align \nonumber
-        \item \left|1 + \frac{1}{n} - 1\right| &< \eps;
-        \item \left|\frac{1}{n}\right| & < \eps.
+    \gather \nonumber
+        \item \left|1 + \frac{1}{n} - 1\right| < \eps;
+        \item \left|\frac{1}{n}\right| < \eps.
     Заметим, что $n$ — натуральное число, значит положительное, значит
     $\frac{1}{n}$ — тоже положительное, значит его модуль всегда равен ему
     самому. Следовательно, знак модуля можно просто снять. Получим неравенство:
@@ -849,12 +850,13 @@ $\eps$ от $A$».
     для всякого $\eps>0$, положим $N(\eps):=\left\lceil \frac{1}{\eps}
     \right\rceil$. Тогда для всякого натурального $n>N(\eps)$, справедлива
     цепочка равенств и неравенств:
-    \align \nonumber
+    \gather \nonumber
         \item 
-            \left|\frac{1}{n^2+5n+12}-0\right| & = \left|\frac{1}{n^2+5n+12}\right| =
+            \left|\frac{1}{n^2+5n+12}-0\right| = 
+        \splitem \splonly{=} \left|\frac{1}{n^2+5n+12}\right| =
         \item
-            = \frac{1}{n^2+5n+12} & < \frac{1}{n} < \frac{1}{\lceil
-            1/\eps \rceil} \le \frac{1}{1/\eps}=\eps.
+            = \frac{1}{n^2+5n+12}  < 
+        \splitem \splonly{<} \frac{1}{n} < \frac{1}{\lceil 1/\eps \rceil} \le \frac{1}{1/\eps}=\eps.
     Доказательство законечно. (Конечно, в аккуратном тексте нужно обосновать
     каждое из равенств и неравенств в цепочке, но мы это уже сделали выше.) 
 
@@ -872,9 +874,10 @@ $\eps$ от $A$».
     Опровергнуть утверждение — это всё равно, что доказать его отрицание.
     Запишем отрицание, пользуясь \ref[разделом][ssec:02:quant-neg-series] лекции
     \ref{chap:02:logic}:
-    \equation \label eq:04:ne
-        \exists \eps > 0 \\ \forall N \in \mathbb N\\ \exists n > N\colon 
-        \left|\frac{1}{n}-1\right|\ge \eps.
+    \align 
+        \item \label eq:04:ne
+            \exists \eps > 0 \\ \forall N \in \mathbb N\\ 
+        \splitem \exists n > N\colon \left|\frac{1}{n}-1\right|\ge \eps.
     Иными словами, нам нужно доказать, что существует такой $\eps>0$, что какой
     бы номер $N$ мы ни выбрали, найдётся номер $n$, больший, чем $N$, для
     которого элемент с номером $n$ не является $\eps$-близким к $1$. Попросту
@@ -972,9 +975,11 @@ $\eps$ от $A$».
 
     Итак, положим: $n:=N+1$. Осталось доказать, что выполняется неравенство
     \ref{eq:04:fracge}.  Действительно:
-    \eq
-        \left|\frac{1}{N+1}-1\right| =
-        1-\frac{1}{N+1} \ge 1-\frac{1}{2} =  \frac{1}{2}\ge \frac{1}{3}=\eps.
+    \align
+        \item 
+            \left|\frac{1}{N+1}-1\right| & = 1-\frac{1}{N+1} \ge 
+        \splitem \splonly{& \ge} 1-\frac{1}{2} = 
+        \splitem \splonly{&=} \frac{1}{2}\ge \frac{1}{3}=\eps.
     Первое равенство следует из того факта, что $\frac{1}{N+1}$ меньше единицы
     для натуральных $N$ и модуль может быть раскрыт только так, первое 
     неравенство следует из того факта, что $\frac{1}{N+1}$ ещё и меньше $1/2$,
@@ -1018,7 +1023,7 @@ $\eps$ от $A$».
     \figure
         \img
             \style
-                padding: 4em; max-width:700px;
+                padding: 1em; max-width:700px;
             \src lim-seq-5.svg
             \alt
                 Нарисован график последовательности a_n=(-1)^n. На оси y
@@ -1055,7 +1060,7 @@ $\eps$ от $A$».
     \figure
         \img
             \style
-                padding: 4em; max-width:700px;
+                padding: 1em; max-width:700px;
             \src lim-seq-6.svg
             \alt
                 На предыдущей картинке дополнительно нарисованы горизонтальные
@@ -1124,11 +1129,11 @@ $\eps$ от $A$».
     утверждения про пределы:
     \align
         \item \label eq:04:A1
-            \forall \eps_1>0\\ \exists N_1=N_1(\eps_1)\\ \forall n > N_1&\colon 
-            |a_n - A_1|  < \eps_1;
+            \forall \eps_1>0\\ &\exists N_1=N_1(\eps_1)\\ 
+        \splitem \splonly{&} \forall n > N_1\colon |a_n - A_1|  < \eps_1;
         \item \label eq:04:A2
-            \forall \eps_2>0\\ \exists N_2=N_2(\eps_2)\\ \forall n > N_2&\colon 
-            |a_n - A_2|  < \eps_2.
+            \forall \eps_2>0\\ &\exists N_2=N_2(\eps_2)\\ 
+        \splitem \splonly{&} \forall n > N_2\colon |a_n - A_2|  < \eps_2.
     Мы обсуждали (см. \ref[раздел][ssec:03:bound]), что когда есть несколько
     утверждений с кванторами, в которых участвуют одни и те же буквы, никакой
     связи между этими буквами за пределами соответствующих утверждений нет.
@@ -1166,7 +1171,7 @@ $\eps$ от $A$».
         \img
             \src lim-seq-7.svg
             \style
-                padding: 2em;
+                padding: 1em;
             \alt
                 Построен график некоторой последовательности {a_n}. На вертикальной
                 оси отмечены две различные точки A_1 и A_2, A_1 > A_2. Отрезок [A_1,
@@ -1201,9 +1206,11 @@ $\eps$ от $A$».
     $\eps_1$ и $\eps_2$ положительны.
 
     Пусть также
-    \eq
-        N_1:= N_1(\eps_1)=N_1\left(\frac{|A_1-A_2|}{3}\right),\quad 
-        N_2:= N_2(\eps_1)=N_2\left(\frac{|A_1-A_2|}{3}\right).
+    \align
+        \item N_1&:= N_1(\eps_1)=
+        \splitem \splonly{&=}N_1\left(\frac{|A_1-A_2|}{3}\right),\longonly{\quad}
+        \splitem N_2&:= N_2(\eps_1)=
+        \splitem \splonly{&=} N_2\left(\frac{|A_1-A_2|}{3}\right).
 
     Теперь нужно найти элемент (достаточно будет одного), который приведёт нас к
     противоречию. Его номер должен одновременно удовлетворять условию $n>N_1$
@@ -1223,9 +1230,11 @@ $\eps$ от $A$».
     Чтобы не возиться с раскрытием модулей и рассмотрением разных случаев,
     применим известное неравенство треугольника: расстояние от $A_1$ до $A_2$ не
     превосходит сумму расстояний от $A_1$ до $a_n$ и от $a_n$ до $A_2$. Имеем:
-    \eq
-        |A_1 - A_2| \le |A_1 - a_n| + |a_n - A_2| <
-        \frac{|A_1-A_2|}{3}+\frac{|A_1-A_2|}{3}=\frac{2}{3}|A_1-A_2|.
+    \align
+        \item |A_1 - A_2| &\le |A_1 - a_n| + 
+        \splitem \splonly{&+} |a_n - A_2| <
+        \splitem \splonly{&<} \frac{|A_1-A_2|}{3}+\frac{|A_1-A_2|}{3}=
+        \splitem \splonly{&=} \frac{2}{3}|A_1-A_2|.
     Но $|A_1-A_2|$ — положительное число! Положительные числа уменьшаются, если
     их умножить на $2/3$, а не увеличиваются, как следует из нашего неравенства.
     Противоречие! Теорема доказана.
