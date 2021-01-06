@@ -380,7 +380,7 @@ theorem.
             \forall \eps_1 > 0\\ \exists N=N_1(\eps_1)\\ \forall n > N_1 &
             \colon |a_n - A| < \eps_1;
         \item \label eq:06:sandwich2
-            \forall \eps_2 > 0\\ \exists N=N_2(\eps_2)\\ \forall n > N_1 &
+            \forall \eps_2 > 0\\ \exists N=N_2(\eps_2)\\ \forall n > N_2 &
             \colon |c_n - A| < \eps_2;
         \item \label eq:06:sandwich-est
             \forall n \in \mathbb N &\colon a_n \le b_n \le c_n.
