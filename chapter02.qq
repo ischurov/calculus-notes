@@ -295,8 +295,12 @@ n\colon R(n)$, хотя в нём фигурирует переменная $n$,
     Рассмотрим какой-нибудь предикат $P(x)$, определенный на множестве $\set{1,
     2, 3}$. Тогда утверждение $\forall x \colon P(x)$ эквивалентно такому: $P(1)
     \wedge P(2) \wedge P(3)$. Его отрицание легко переписать по законам де
-    Моргана: $\neg(P(1) \wedge P(2) \wedge P(3))=(\neg P(1)) \vee (\neg P(2))
-    \vee (\neg P(3))$. Которое в свою очередь эквивалентно $\exists x \colon
+    Моргана: 
+    \gather \nonumber
+        \item \neg(P(1) \wedge P(2) \wedge P(3))=
+        \splitem \splonly{=}  (\neg P(1)) \vee (\neg P(2))
+            \vee (\neg P(3)).
+    Оно в свою очередь эквивалентно $\exists x \colon
     \neg P(x)$.
 
 \section Кванторы и предикаты с несколькими переменными
@@ -392,9 +396,10 @@ $\forall m\colon n>m$ через $W(n)$. Утверждение \ref{eq:02:exist
     \neg(\exists n\colon W(n))
 Применим к нему равенство \ref{eq:02:negexists}:
 
-\equation \label eq:02:neg-quantors
-    \neg(\exists n \colon W(m))=\forall n(\neg W(m))=\forall n(\neg(\forall
-    m\colon n>m))=\ldots
+\align
+    \item \label eq:02:neg-quantors 
+        \neg(\exists n \colon W(m))&=\forall n(\neg W(m))=
+    \splitem \splonly{&=} \forall n(\neg(\forall m\colon n>m))=\ldots
 Теперь можно к выражению $\neg(\forall m\colon m>m)$ применить формулу
 \ref{eq:02:negofrall} и подставить результат в \ref{eq:02:neg-quantors}:
 \eq
