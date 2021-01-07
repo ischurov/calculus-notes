@@ -396,10 +396,10 @@ $\forall m\colon n>m$ через $W(n)$. Утверждение \ref{eq:02:exist
     \neg(\exists n\colon W(n))
 Применим к нему равенство \ref{eq:02:negexists}:
 
-\align
+\gather
     \item \label eq:02:neg-quantors 
-        \neg(\exists n \colon W(m))&=\forall n(\neg W(m))=
-    \splitem \splonly{&=} \forall n(\neg(\forall m\colon n>m))=\ldots
+        \neg(\exists n \colon W(m))=\forall n(\neg W(m))=
+    \splitem \splonly{=} \forall n(\neg(\forall m\colon n>m))=\ldots
 Теперь можно к выражению $\neg(\forall m\colon m>m)$ применить формулу
 \ref{eq:02:negofrall} и подставить результат в \ref{eq:02:neg-quantors}:
 \eq

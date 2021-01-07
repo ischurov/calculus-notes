@@ -624,9 +624,10 @@ $\eps$-близок к $A$», выполнялось \emph{для любого} 
     $\eps>0$ её хвост $\eps$-близок к $A$.
 
     Формально:
-    \equation \label eq:04:def-lim
-        \forall \eps > 0\\ \exists N \in \mathbb N\\ \forall n > N: 
-        |a_n - A| < \eps.
+    \gather
+        \item \label eq:04:def-lim
+            \forall \eps > 0\\ \exists N \in \mathbb N\\ \forall n > N: 
+        \splitem |a_n - A| < \eps.
 
     Если последовательность $\seq{a_n}$ имеет предел $A$, говорят также, что она
     \emph{стремится} к $A$. 
@@ -1129,10 +1130,10 @@ $\eps$ от $A$».
     утверждения про пределы:
     \align
         \item \label eq:04:A1
-            \forall \eps_1>0\\ &\exists N_1=N_1(\eps_1)\\ 
+            \forall &\eps_1>0\\ \exists N_1=N_1(\eps_1)\\ 
         \splitem \splonly{&} \forall n > N_1\colon |a_n - A_1|  < \eps_1;
         \item \label eq:04:A2
-            \forall \eps_2>0\\ &\exists N_2=N_2(\eps_2)\\ 
+            \forall &\eps_2>0\\ \exists N_2=N_2(\eps_2)\\ 
         \splitem \splonly{&} \forall n > N_2\colon |a_n - A_2|  < \eps_2.
     Мы обсуждали (см. \ref[раздел][ssec:03:bound]), что когда есть несколько
     утверждений с кванторами, в которых участвуют одни и те же буквы, никакой
@@ -1230,11 +1231,11 @@ $\eps$ от $A$».
     Чтобы не возиться с раскрытием модулей и рассмотрением разных случаев,
     применим известное неравенство треугольника: расстояние от $A_1$ до $A_2$ не
     превосходит сумму расстояний от $A_1$ до $a_n$ и от $a_n$ до $A_2$. Имеем:
-    \align
-        \item |A_1 - A_2| &\le |A_1 - a_n| + 
-        \splitem \splonly{&+} |a_n - A_2| <
-        \splitem \splonly{&<} \frac{|A_1-A_2|}{3}+\frac{|A_1-A_2|}{3}=
-        \splitem \splonly{&=} \frac{2}{3}|A_1-A_2|.
+    \gather
+        \item |A_1 - A_2| \le  
+        \splitem \splonly{\le} |A_1 - a_n| + |a_n - A_2| <
+        \splitem \splonly{<} \frac{|A_1-A_2|}{3}+\frac{|A_1-A_2|}{3}=
+        \splitem \splonly{=} \frac{2}{3}|A_1-A_2|.
     Но $|A_1-A_2|$ — положительное число! Положительные числа уменьшаются, если
     их умножить на $2/3$, а не увеличиваются, как следует из нашего неравенства.
     Противоречие! Теорема доказана.
