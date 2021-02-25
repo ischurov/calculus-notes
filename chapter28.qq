@@ -123,7 +123,7 @@
     \eq
         \frac{1}{k(k+1)}=\frac{1}{k} - \frac{1}{k+1}.
     Дальше хочется сделать такую штуку:
-    \multline
+    \multline \nonumber
         \item \sum_{k=1}^\infty \frac{1}{k(k+1)} = 
             \sum_{k=1}^\infty \left(\frac{1}{k}-\frac{1}{k+1}\right) = 
             \left(\frac{1}{1} - \frac{1}{2}\right) + 

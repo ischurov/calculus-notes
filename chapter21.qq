@@ -398,12 +398,11 @@ $n$-ю производную в точке $x_0$ (и, стало быть, вс
     \eq
         \ln x = (x-1) - \frac{(x-1)^2}{2}+o((x-1)^2).
     Подставим это выражение в наш предел. Имеем:
-    \multline
+    \multline \nonumber
         \item 
             \lim_{x\to 1} \frac{\ln (x)-x-1}{(x-1)^2} = 
             \lim_{x\to 1}\frac{(x-1)
             - \frac{(x-1)^2}{2}+o((x-1)^2) - x + 1}{(x-1)^2}=
-
         \item
             =\lim_{x\to 1}\frac{\frac{(x-1)^2}{2}+o((x-1)^2)}{(x-1)^2}
             =\lim_{x\to 1}\left(\frac{1}{2} + \frac{o((x-1)^2)}{(x-1)^2}\right).
