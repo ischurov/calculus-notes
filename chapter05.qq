@@ -280,7 +280,7 @@ $\seq{b_n}$. Можно записать:
         |b_n - B| < \eps_2 = \frac{\eps}{2}.
     Положим теперь:
     \eq
-        N(\eps):=\max\left(N_1\left(\frac{\eps}{2}\right)+
+        N(\eps):=\max\left(N_1\left(\frac{\eps}{2}\right),
         N_2\left(\frac{\eps}{2}\right)\right).
     Тогда для всех $n>N(\eps)$, будет выполнятья $n>N_1$ и $n>N_2$, и значит
     будут выполняться обе оценки \ref{eq:05:a-sum-est} и \ref{eq:05:b-sum-est}.
