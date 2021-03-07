@@ -187,7 +187,7 @@ $(f(x)g(x))'$ — это $f(x)g(x)$. Можно записать:
 
     Давайте попробуем иначе: пусть теперь $f(x)=x$ и $g'(x)=\sin x$. Интегрируя
     синус, положим $g(x)=-\cos x$. Тогда
-    \multline
+    \multline \nonumber
         \item 
             \int x \sin x \, dx = \int x (-\cos x)' \, dx = -x \cos x - \int (-\cos
             x) x' \, dx = 
@@ -211,7 +211,7 @@ $(f(x)g(x))'$ — это $f(x)g(x)$. Можно записать:
     $f(x)g'(x)$? Оказывается, есть, ведь всегда можно умножить на единицу!
     Действительно, положим $f(x)=\ln x$ и $g'(x)=1$. Тогда можно взять $g(x)=x$
     и получить:
-    \multline
+    \multline \nonumber
         \item \int \ln x \, dx = \int (\ln x) \cdot x'\, dx = x \ln x - \int (\ln x)'
             x\, dx = 
         \item =x \ln x - \int \frac{1}{x} x\, dx = x\ln x - \int 1\cdot dx =
