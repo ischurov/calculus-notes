@@ -53,10 +53,10 @@
     всякого $C$ найдётся такая $\delta>0$, что для всех $x$ из проколотой
     $\delta$-окрестности точки $x_0$ выполняется неравенство: $|f(x)| > C$.
     Формально:
-    \eq
-        \forall C \in \mathbb R \\ \exists \delta>0 \\ \forall x\in \mathbb
-        R\colon
-        0 < |x-x_0| < \delta \Rightarrow |f(x)| > C.
+    \align \nonumber
+        \item \forall C \in \mathbb R & \\ \exists \delta>0 \\ \forall x\in \mathbb R\colon
+        \splitem \splonly{&}
+            0 < |x-x_0| < \delta \Rightarrow |f(x)| > C.
     Записывают:
     \eq
         \lim_{x\to x_0} f(x)=\infty.
@@ -453,7 +453,10 @@
     Прямая $y=kx+b$ называется \emph{наклонной асимптотой} функции $f(x)$ (или
     её графика), если хотя бы один из пределов
     \eq
-        \lim_{x\to +\infty} (f(x) - (kx + b)),\quad\text{или}\quad \lim_{x\to -\infty} (f(x) - (kx + b))
+        \lim_{x\to +\infty} (f(x) - (kx + b)),
+    или
+    \eq
+        \lim_{x\to -\infty} (f(x) - (kx + b))
     равен нулю.
 
 \remark
@@ -477,22 +480,23 @@
 \proof
     Докажем в одну сторону. Пусть $y=kx+b$ является наклонной асимптотой функции
     $f(x)$ при $x\to +\infty$. Тогда
-    \eq
-        \lim_{x\to +\infty} \frac{f(x)}{x}=
-        \lim_{x\to +\infty} \frac{f(x)-(kx+b)+(kx+b)}{x}=
-        \lim_{x\to +\infty} \left(\frac{f(x)-(kx+b)}{x}+k+\frac{b}{x}\right)=k
+    \align \nonumber
+        \item &\lim_{x\to +\infty} \frac{f(x)}{x}=
+        \splitem \splonly{&=}\lim_{x\to +\infty} \frac{f(x)-(kx+b)+(kx+b)}{x}=
+        \item &=\lim_{x\to +\infty} \left(\frac{f(x)-(kx+b)}{x}+k+\frac{b}{x}\right)=k
     Предел первого слагаемого равен нулю, поскольку числитель стремится к нулю
     (по предположению), а знаменатель к бесконечности.
 
     Со вторым пределом ещё проще:
-    \eq
-        \lim_{x\to +\infty} (f(x)-kx)=\lim_{x\to +\infty} ( (f(x) - (kx + b) + b ) = b.
+    \align \nonumber
+        \item \lim_{x\to +\infty} & (f(x)-kx)=
+        \splitem \splonly{&=} \lim_{x\to +\infty} ( (f(x) - (kx + b) + b ) = b.
 
     В обратную сторону. Пусть существует предел \ref{eq:12:asy-b} и он равен
     $b$. Тогда
-    \eq
-        \lim_{x\to +\infty} (f(x) - (kx + b)) = \lim_{x\to +\infty} (f(x)-kx) -
-        b = b - b = 0.
+    \align \nonumber
+        \item \lim_{x\to +\infty} & (f(x) - (kx + b)) = 
+        \splitem \splonly{&=} \lim_{x\to +\infty} (f(x)-kx) - b = b - b = 0.
     Утверждение доказано.
 
 Конечно, можно сформулировать и доказать аналогичное утверждение для $x\to
