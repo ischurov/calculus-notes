@@ -86,10 +86,10 @@
     не равен $a$.
     \align
         \item 
-            \forall \eps > 0\\ \exists N=N(\eps)\\ \forall n > N & \colon
-            |a_n - A| < \eps.
+            \forall  \eps & > 0\\ \exists N=N(\eps)\\ 
+        \splitem  \splonly{&} \forall n > N  \colon |a_n - A| < \eps.
         \item
-            \forall n \in \mathbb N& \colon a_n \ne a.
+            \forall  n & \in \mathbb N \colon a_n \ne a.
     \paragraph{Нужно доказать} Последовательность отделена от $a$.
     \eq
         \exists c > 0\\ \forall n \in \mathbb N\colon |a_n - a| \ge c.
@@ -125,9 +125,9 @@
         |A - a| \le |a_n - a| + |A - a_n|  <  |a_n - a| + \eps.
     Перенесём $\eps$ в левую часть, подставим его значение и перевернём
     неравенство:
-    \eq
-        |a_n - a| > |A - a| - \eps = |A-a| - \frac{|A-a|}{2} =
-        \frac{|A-a|}{2}.
+    \align \nonumber
+        \item |a_n - a| > |A - a| - \eps & = |A-a| - \frac{|A-a|}{2} =
+        \splitem \splonly{& =} \frac{|A-a|}{2}.
     Ура, получилась оценка сверху, которую мы хотели. Отсюда видно, что хвост
     последовательности (все члены, начиная с члена с номером $N+1$)
     отделён от $a$.  Что насчёт начальной части последовательности?
@@ -144,7 +144,7 @@
             \src
                 more-lim-properties-3.svg
             \style
-                padding: 1em;
+                padding: 0.5em;
             \alt 
                 Дополнительно к предыдущей картинке нарисован коридор вокруг
                 $a$, граница которого проходит по ближайшей к $a$ точке левее
@@ -161,8 +161,9 @@
 
     Сведём всё воедино. Положим:
 
-    \eq
-        c = \min\set{|a_1-a|, |a_2 - a|, \ldots, |a_N-a|, \frac{|A-a|}{2}}.
+    \align \nonumber
+        \item c = \min\set{|a_1-a|, |a_2 - a|, \ldots, 
+        \splitem |a_N-a|, \frac{|A-a|}{2}}.
     Для всякого натурального $n$, либо $n \le N$, и тогда $|a_n - A| \ge c$
     по определению минимума, либо $n > N$, и тогда $|a_n - A| \ge
     \eps_1=\frac{|A-a|}{2} \ge c$.
@@ -196,10 +197,11 @@
         \lim_{n \to \infty} \frac{1}{a_n}=\frac{1}{A}.
 \proof
     Рассмотрим разность, которую нам нужно сделать маленькой:
-    \eq
-        \left| \frac{1}{a_n}-\frac{1}{A}\right| = \left| \frac{A-a_n}{a_n A}
-        \right| = \frac{|A-a_n|}{|a_n|\cdot |A|}=\frac{1}{|a_n|} \cdot
-        \frac{1}{|A|} \cdot |A-a_n|.
+    \align \nonumber
+        \item \left| \frac{1}{a_n}-\frac{1}{A}\right| & = \left| \frac{A-a_n}{a_n A}
+            \right|  = \frac{|A-a_n|}{|a_n|\cdot |A|}=
+        \splitem \splonly{&=} \frac{1}{|a_n|} \cdot
+            \frac{1}{|A|} \cdot |A-a_n|.
     Поскольку последовательность $\seq{a_n}$ имеет только ненулевые элементы и
     стремится к числу, отличному от нуля, она отделена от нуля по
     \ref[утверждению][prop:06:lim-bound-away]. Значит, сомножитель
@@ -210,7 +212,7 @@
     \eq
         \left| \frac{1}{a_n}-\frac{1}{A}\right| < \frac{C}{|A|} \eps.
     По \ref[упрощающей лемме\nonumber][lem:05:simplify], мы доказали, что предел
-    равен $1/A$ (в качестве константы в лемме можно выбрать $\frac{C}{|A|}$).
+    равен $1/A$: в качестве константы в лемме можно взять число $C/|A|$.
 \remark
     Условие о том, что все элементы последовательности $\seq{a_n}$ ненулевые,
     носит технический характер. Если какой-то элемент $a_n$ равен нулю, то
@@ -235,10 +237,12 @@
     Запишем $\frac{a_n}{b_n}=a_n\frac{1}{b_n}$, затем воспользуемся
     \ref[теоремой о пределе произведения\nonumber][thm:05:prod] и \ref[только
     что доказанной теормой\nonumber][thm:06:inverse] о пределе обратных величин:
-    \eq
-        \lim_{n \to \infty}\frac{a_n}{b_n}=\lim_{n\to \infty} a_n \cdot
-        \frac{1}{b_n} = \lim_{n\to \infty}{a_n} \cdot \lim_{n
-        \to \infty} \frac{1}{b_n} = A\cdot \frac{1}{B}=\frac{A}{B}.
+    \align \nonumber
+        \item 
+            \lim_{n \to \infty}\frac{a_n}{b_n}=\lim_{n\to \infty} a_n \cdot
+            \frac{1}{b_n} &=\lim_{n\to \infty}{a_n} \cdot \lim_{n
+            \to \infty} \frac{1}{b_n} =
+        \splitem \splonly{&=}  A\cdot \frac{1}{B}=\frac{A}{B}.
     Следствие доказано.
 
 \section Пределы и неравенства
@@ -271,7 +275,7 @@
                 противоречие: точки должны лежать ниже y=a, но при этом близко
                 к A.
         \caption
-            Иллюстрация кпредельному переходу в неравенствах, доказательство
+            Иллюстрация к предельному переходу в неравенствах, доказательство
             \ref[теоремы][thm:06:lim-ineq] от противного.
         \label fig:06:limit-ineq
         
@@ -318,17 +322,17 @@
         \lim_{n \to \infty} c_n = \lim_{n \to \infty} (a_n - b_n) \le 0.
     С другой стороны, по теоремам \ref[о пределе суммы\nonumber][thm:05:sum]  и
     \ref[произведения\nonumber][thm:05:prod],
-    \eq
-        \lim_{n \to \infty} (a_n - b_n) = \lim_{n \to \infty} (a_n + (-1)
-        b_n)=
-        \lim_{n \to \infty} a_n + \lim_{n \to \infty} (-1) \cdot \lim_{n \to \infty} b_n
-        = A + (-1) \cdot B  = A - B.
+    \align \nonumber
+        \item 
+            \lim_{n \to \infty} (a_n - b_n) = \lim_{n \to \infty} (a_n + (-1)
+            b_n)=
+        \splitem 
+            \splonly{=} \lim_{n \to \infty} a_n + 
+            \lim_{n \to \infty} (-1) \cdot \lim_{n \to \infty} b_n = 
+        \splitem \splonly{=} A + (-1) \cdot B  = A - B.
     Таким образом, $A - B \le 0$ или $A \le B$.
 
 \subsection Теорема о двух милиционерах \label ssec:06:sandwich
-
-Следующая теорема в 2020-21 учебном году на самом деле была доказана в лекции 7,
-но по логике изложения больше подходит для этой лекции.
 
 \theorem \label thm:06:sandwich
     Рассмотрим три последовательности: $\seq{a_n}$, $\seq{b_n}$, $\seq{c_n}$.
@@ -377,13 +381,15 @@ theorem.
     Формализуем условие. Нам даны следующие утверждения:
     \align
         \item \label eq:06:sandwich1
-            \forall \eps_1 > 0\\ \exists N=N_1(\eps_1)\\ \forall n > N_1 &
+            \forall \eps_1 \splonly{&} > 0\\ \exists N=N_1(\eps_1)\\ 
+        \splitem \splonly{&} \forall n > N_1 
             \colon |a_n - A| < \eps_1;
         \item \label eq:06:sandwich2
-            \forall \eps_2 > 0\\ \exists N=N_2(\eps_2)\\ \forall n > N_2 &
+            \forall \eps_2 \splonly{&} > 0\\ \exists N=N_2(\eps_2)\\ 
+        \splitem \splonly{&} \forall n > N_2 
             \colon |c_n - A| < \eps_2;
         \item \label eq:06:sandwich-est
-            \forall n \in \mathbb N &\colon a_n \le b_n \le c_n.
+            \forall n\splonly{&} \in \mathbb N \colon a_n \le b_n \le c_n.
     Положим $\eps_1=\eps_2=\eps$ и перепишем неравенства в \ref{eq:06:sandwich1}
     и \ref{eq:06:sandwich2}: вместо неравенств с модулями запишем двойные
     неравенства, которые им эквивалентны:
@@ -449,14 +455,23 @@ theorem.
         \left(\frac{\sin n^n \cdot \cos n!}{n^2+1}\right)^{15}.
     Выглядит жутковато, но на самом деле не очень. Заметим, что $|\sin n^n| \le
     1$ и $|\cos n!| \le 1$. По свойствам модулей:
-    \eq
-        \left|\left(\frac{\sin n^n \cdot \cos n!}{n^2+1}\right)^{15}\right| =
-        \left(
-            \frac{|\sin n^n| \cdot |\cos n!|}
-            {|n^2+1|}
-        \right)^{15}=
-        \frac{|\sin n^n|^{15}\cdot |\cos n!|^{15}}{(n^2+1)^{15}}\le \frac{1^{15}\cdot
-        1^{15}}{(n^2+1)^{15}} < \frac{1}{n^2+1}.
+    \align \nonumber
+        \item \splonly{&}
+            \left|
+                \left(\frac{\sin n^n \cdot \cos n!}{n^2+1}\right)^{15}
+            \right| =
+        \splitem
+            \splonly{&=} 
+            \left(
+                \frac{|\sin n^n| \cdot |\cos n!|}
+                {|n^2+1|}
+            \right)^{15}=
+        \splitem
+            \splonly{&=}
+            \frac{|\sin n^n|^{15}\cdot |\cos n!|^{15}}{(n^2+1)^{15}} \le
+        \splitem 
+            \splonly{&\le} \frac{1^{15}\cdot 1^{15}}{(n^2+1)^{15}} <
+        \splitem \splonly{&<} \frac{1}{n^2+1}.
     Мы воспользовались тем фактом, что натуральные числа больше 1 при возведении
     в положительные степени возрастают. Таким образом:
     \eq

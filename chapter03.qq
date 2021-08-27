@@ -64,9 +64,9 @@ $n$.
         (1+x)^n \ge 1+nx.
 \proof
     Формально это утверждение записывается так:
-    \eq
-        \forall n \in \mathbb N\\ \forall x \in \mathbb R\colon (x \ge -1)
-        \Rightarrow ((1 + x)^n \ge 1+nx)
+    \align \nonumber
+        \item \forall n \in \mathbb N\\ \forall x \in \mathbb R\colon (x \ge -1) \Rightarrow 
+        \splitem \splonly{\Rightarrow} ((1 + x)^n \ge 1+nx)
     Поскольку мы делаем утверждение про выполнение неравенства не для всех
     вещественных $x$, а только для $x \ge -1$, приходится записывать формулу с
     импликацией. Но часто вместо этого пишут условие сразу после квантора, и мы
@@ -372,7 +372,7 @@ $\frac{p}{q}$ будет соответствовать точка на плос
     \img
         \src pic-4.svg
         \style
-            padding: 4em;
+            padding: 2em;
         \alt
             Представление рациональных чисел в виде точек на декартовой
             плоскости, см. описание в тексте.
@@ -493,7 +493,7 @@ $\mathbb N$ на $\mathbb Q$. Таким образом, $\mathbb N$ и $\mathbb
         \img
             \src pic-10.svg
             \style
-                padding: 4em;
+                padding: 2em;
             \alt
                 Построение числа $z$, см. описание в тексте
         \caption

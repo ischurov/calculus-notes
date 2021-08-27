@@ -9,9 +9,10 @@
 
     \paragraph{У нас есть} $\lim_{n \to \infty} a_n = A$, в кванторах
     записывается так:
-    \equation \label eq:05:lim
-        \forall \eps > 0\\ \exists N=N(\eps)\\ \forall n > N\colon |a_n - A| <
-        \eps.
+    \align 
+        \item \label eq:05:lim
+            \forall \eps > 0\\ \exists N=N(\eps)\\ \forall n > N\colon 
+        \splitem |a_n - A| < \eps.
 
     \paragraph{Мы хотим получить} Последовательность $\seq{a_n}$ ограничена, то
     есть
@@ -60,8 +61,10 @@
 
     Величина $|a_n|$ — это расстояние от $a_n$ до нуля. Это расстояние не
     больше, чем сумма расстояний от $a_n$ до $A$ и от $A$ до $0$:
-    \eq
-        |a_n| = |a_n - 0| \le |a_n - A| + |A-0| = |a_n - A| + |A|.
+    \align \nonumber
+        \item 
+            |a_n|  = |a_n - 0| & \le |a_n - A| + |A-0| = 
+        \splitem \splonly{&=} |a_n - A| + |A|.
     Но мы знаем, что для $n>N$, $|a_n - A| < 1$. Следовательно, для тех же $n$,
     \equation \label eq:05:A+1
         |a_n| < |A|+1.

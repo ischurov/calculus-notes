@@ -144,9 +144,11 @@
     \paragraph{Нам дано}
     \align 
         \item \label eq:07:plusinfty1
-            \forall C_1 \\ \exists N=N_1(C_1)\\ \forall n > N  \colon &\\ a_n > C_1;
+            \forall C_1 & \\ \exists N=N_1(C_1)\\ 
+        \splitem  \splonly{&} \forall n > N  \colon \\ a_n > C_1;
         \item \label eq:07:plusinfty2
-            \forall C_2 \\ \exists N=N_2(C_2)\\ \forall n > N  \colon &\\  b_n > C_2.
+            \forall C_2 & \\ \exists N=N_2(C_2)\\ 
+        \splitem \splonly{&} \forall n > N  \colon \\  b_n > C_2.
     \paragraph{Хотим получить}
     \eq
         \forall C \\ \exists N=N(C)\\ \forall n > N\colon a_n + b_n > C.
