@@ -497,8 +497,10 @@ $x_0$. Во-вторых, функция может быть не определ
         саму точку $x_0$, то есть множество $(a, x_0)\cup (x_0, b)$, где
         $a<x_0<b$. \emph{Эпсилон-окрестностью} (\emph{$\eps$-окрестностью})
         точки $x_0$ называется интервал $(x_0-\eps, x_0+\eps)$. \emph{Проколотой
-        $\eps$-окрестностью} точки $x_0$ называется множество $(x_0-\eps,
-        x_0)\cup (x_0, x_0+\eps)=(x_0-\eps, x_0+\eps)\setminus\set{x_0}$.
+        $\eps$-окрестностью} точки $x_0$ называется множество 
+        \align \nonumber
+            \item (x_0-\eps, x_0)\cup (x_0, x_0+\eps)=
+            \splitem \splonly{=} (x_0-\eps, x_0+\eps)\setminus\set{x_0}.
         Обычно $\eps$-окрестность точки $x_0$ обозначается как $U_\eps(x_0)$, а
         проколотая $\eps$-окрестность — как $\mathring{U}_\eps(x_0)$.
 
@@ -536,9 +538,9 @@ $x_0$. Во-вторых, функция может быть не определ
         \forall \eps > 0 \\ \exists \delta > 0 \\ \forall x \in
         \mathring{U}_{\delta}(x_0)\colon f(x) \in U_\eps(b),
     или, с учётом \ref[замечания][rem:10:nbd-to-abs]:
-    \eq
-        \forall \eps > 0 \\ \exists \delta > 0 \\ \forall x \in \mathbb R\colon 
-        0 < |x-x_0| < \delta \Rightarrow |f(x)-b| < \eps.
+    \align \nonumber
+        \item \forall \eps > 0 & \\ \exists \delta > 0 \\ \forall x \in \mathbb R\colon 
+        \splitem \splonly{&}0 < |x-x_0| < \delta \Rightarrow |f(x)-b| < \eps.
 \figure
     \img
         \src limfunc-4.svg
