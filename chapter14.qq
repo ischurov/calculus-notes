@@ -182,9 +182,12 @@
     \eq
        \lim_{k\to \infty} f(l_k) = f(c),\quad \lim_{k\to \infty} f(r_k)=f(c).
     По теореме о пределе произведения отсюда следует, что
-    \eq
-            \lim_{k\to \infty} f(l_k)f(r_k) =\lim_{k\to \infty} f(l_k)\cdot
-            \lim_{k\to \infty} f(r_k) = f(c)\cdot f(c) = f(c)^2.
+    \align \nonumber
+        \item
+            \lim_{k\to \infty} f(l_k)f(r_k) & =
+            \lim_{k\to \infty} f(l_k)\cdot \lim_{k\to \infty} f(r_k)=
+        \splitem \splonly{&=} f(c)\cdot f(c) = f(c)^2.
+
     Таким образом, $f(c)^2 \le 0$. Но квадрат любого вещественного числа
     неотрицателен! Значит, единственная альтернатива — $f(c)=0$. Значит, $c$ —
     искомый корень.
