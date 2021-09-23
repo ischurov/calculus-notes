@@ -210,7 +210,7 @@
     Умножим на $\eps$ и разделим на $|a_n|$ (поскольку $|a_n| > C > 0$, на него
     можно делить):
     \eq
-        \left|\frac{1}{n}\right| = \frac{1}{|a_n|} < \eps.
+        \left|\frac{1}{a_n}\right| = \frac{1}{|a_n|} < \eps.
     Что и требовалось.
 
 \proposition
