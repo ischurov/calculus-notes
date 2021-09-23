@@ -1209,8 +1209,8 @@ $\eps$ от $A$».
     Пусть также
     \align
         \item N_1&:= N_1(\eps_1)=
-        \splitem \splonly{&=}N_1\left(\frac{|A_1-A_2|}{3}\right),\longonly{\quad}
-        \splitem N_2&:= N_2(\eps_1)=
+        \splitem \splonly{&=}N_1\left(\frac{|A_1-A_2|}{3}\right), \quad\ 
+        \splitem N_2\splonly{&}:= N_2(\eps_1)=
         \splitem \splonly{&=} N_2\left(\frac{|A_1-A_2|}{3}\right).
 
     Теперь нужно найти элемент (достаточно будет одного), который приведёт нас к
