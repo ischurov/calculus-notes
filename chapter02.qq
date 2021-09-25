@@ -452,7 +452,7 @@ $4$, но при этом \emph{не делилось} на 2. Именно та
 \question
     Зачем городить такой огород? Почему нельзя было просто написать
     \equation \label eq:02:wrong
-        \forall n\colon P(n) \wedge Q(n)?
+        \forall n\colon E(n) \wedge Q(n)?
     \quiz
         \choice
             Можно было так и написать, формулы \ref{eq:02:wrong} и
