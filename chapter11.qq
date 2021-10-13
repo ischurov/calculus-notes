@@ -143,7 +143,7 @@
     формализуется так:
     \align 
         \item \label eq:11:lim-Cauchy
-            \forall \eps_1 > 0 & \\ \exists \delta_1=\delta_1(\eps_1) > 0 \\ \forall x
+            & \forall \eps_1 > 0  \\ \exists \delta_1=\delta_1(\eps_1) > 0 \\ \forall x
             \in \mathbb R\colon 
         \splitem \splonly{&} 0 < |x-x_0| < \delta_1 \Rightarrow |f(x)-b| < \eps_1.
     Докажем, что в этом случае определение по Гейне тоже выполняется. Пусть
@@ -158,7 +158,7 @@
     в проколотой $\eps_2$-окрестности точки $x_0$. Формально:
     \align 
         \item \label eq:11:lim-x
-            \forall \eps_2>0  \\ \exists N_2=N_2(\eps) & \\ \forall n>N_2\colon 
+            \forall \eps_2>0  \\ & \exists N_2=N_2(\eps) \\ \forall n>N_2\colon 
         \splitem \splonly{&} 0 < |x_n - x_0| < \eps_2.
 
     Мы хотим доказать, что в этом случае $f(x_n) \to b$. Иными словами, нам

@@ -55,11 +55,11 @@
     $X$:
     \align
         \item 
-            \max & X =  m  \quad \Leftrightarrow 
+            & \max  X =  m  \quad \Leftrightarrow 
         \splitem \splonly{&\Leftrightarrow} \quad (m \in X) \wedge (\forall y
             \in X\colon m \ge y).
         \item
-            \min & X = M  \quad \Leftrightarrow 
+            & \min  X = M  \quad \Leftrightarrow 
         \splitem \splonly{&\Leftrightarrow} \quad (M \in X) \wedge (\forall y
             \in X\colon M \le y).
 
@@ -651,7 +651,7 @@ $n$), и всё сложить. Если в разложении $(a+b)^{n-1}$ �
     Имеем:
     \align 
         \item \label eq:08:eee
-            \left(1+\frac{1}{n}\right)^n & =  1^n + \frac{n}{1!} \frac{1}{n} +
+            & \left(1+\frac{1}{n}\right)^n  =  1^n + \frac{n}{1!} \frac{1}{n} +
         \splitem \splonly{&+} \frac{n(n-1)}{2!} \frac{1}{n^2} + 
         \splitem \splonly{&+} \frac{n(n-1)(n-2)}{3!} \frac{1}{n^3} + \ldots +
         \splitem \splonly{&+} \frac{n(n-1)(n-2)\ldots 1}{n!}\frac{1}{n^n}.

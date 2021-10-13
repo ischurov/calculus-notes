@@ -39,7 +39,8 @@
 \align 
     \item \label eq:13:cont-quantors
         & \forall \eps>0\\ \exists \delta>0\\ \forall x\colon 
-    \splitem \splonly{&} |x-x_0| < \delta \Rightarrow |f(x)-f(x_0)| < \eps.
+    \splitem \splonly{&} |x-x_0| < \delta \Rightarrow 
+    \splitem \splonly{& \Rightarrow} |f(x)-f(x_0)| < \eps.
 
 \exercise \label exer:13:cont-heine
     Докажите, что функция $f$ непрерывна в точке $x_0$ тогда и только тогда,
@@ -335,21 +336,25 @@ $\lim_{x\to x_0} f(x)$ и тоже равен числу $b$. (См.
     то есть функция $g(y)$ непрерывна в точке $y_0$.
 
     Тогда
-    \equation \label eq:13:limgf1
-        \lim_{x \to x_0} g(f(x))=g(\lim_{x\to x_0} f(x))=g(y_0).
+    \align
+        \item \label eq:13:limgf1
+            \lim_{x \to x_0} g(f(x))=g(\lim_{x\to x_0} f(x))=
+        \splitem \splonly{=} g(y_0).
 \proof
     Запишем всё в кванторах.
     \paragraph Нам дано
     Первый предел:
     \align 
         \item \label eq:13:limf-q
-            & \forall \eps_1>0 \\ \exists \delta_1 =\delta_1(\eps_1) > 0 \\ \forall x\colon 
-        \splitem \splonly{&} 0 < |x-x_0| < \delta_1 \Rightarrow |f(x)-y_0| < \eps_1.
+            & \forall \eps_1>0 \\ \exists \delta_1 =\delta_1(\eps_1) > 0 \\ 
+        \splitem \splonly{&} \forall x\colon 0 < |x-x_0| < \delta_1 \Rightarrow 
+        \splitem \splonly{& \Rightarrow} |f(x)-y_0| < \eps_1.
     Второй предел:
     \align 
         \item \label eq:13:limg-q
-            & \forall \eps_2>0 \\ \exists \delta_2 =\delta_2(\eps_2) > 0 \\ \forall y\colon 
-        \splitem \splonly{&} |y-y_0| < \delta_2 \Rightarrow |g(y)-g(y_0)| < \eps_2.
+            & \forall \eps_2>0 \\ \exists \delta_2 =\delta_2(\eps_2) > 0 \\  
+        \splitem \splonly{&} \forall y\colon |y-y_0| < \delta_2 \Rightarrow 
+        \splitem \splonly{& \Rightarrow} |g(y)-g(y_0)| < \eps_2.
     Здесь в определении предела мы убрали требование проколотости окрестности в
     силу непрерывности функции $g$ в точке $y_0$ (см. \ref{eq:13:cont-quantors}).
 
@@ -382,8 +387,9 @@ $\lim_{x\to x_0} f(x)$ и тоже равен числу $b$. (См.
     \eq
         \lim_{x\to x_0} h(x) = \lim_{x\to x_0} g(f(x))
     удовлетворяет условию теоремы. Значит,
-    \eq
-        \lim_{x\to x_0} g(f(x))=g(\lim_{x\to x_0} f(x))=g(f(x_0))=h(x_0),
+    \align \nonumher
+        \item \lim_{x\to x_0} g(f(x))=g(\lim_{x\to x_0} f(x))=
+        \splitem \splonly{=} g(f(x_0))=h(x_0),
     то есть $h(x)$ непрерывна в точке $x_0$.
 
 

@@ -28,8 +28,10 @@
     Перегруппируем слагаемые в числителе и разобъём дробь на две:
     \align \nonumber
         \item 
-            \ldots = \lim_{\Delta x \to 0} \left(\frac{f(x_0+\Delta x) - f(x_0)}{\Delta x} +
-        \splitem \splonly{+} \frac{g(x_0+\Delta x) - g(x_0)}{\Delta x}\right)=\ldots
+            \ldots = \lim_{\Delta x \to 0} 
+                \left(\frac{f(x_0+\Delta x) - f(x_0)}{\Delta x} +\right.
+        \splitem \splonly{+} \left.\frac{g(x_0+\Delta x) - g(x_0)}{\Delta x}\right)
+            =\ldots
     По теореме о пределе суммы:
     \align \nonumber
         \item 
@@ -53,7 +55,8 @@
     Снова запишем определение производной:
     \align
         \item \nonumber
-            &h'(x_0) = \lim_{\Delta x \to 0} \frac{h(x_0 + \Delta x)-h(x_0)}{\Delta x}=
+            &h'(x_0) = 
+        \splitem \splonly{&=} \lim_{\Delta x \to 0} \frac{h(x_0 + \Delta x)-h(x_0)}{\Delta x}=
         \item \label eq:16:prod-def
             \longonly{&=\lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) g(x_0 + \Delta x) -
             f(x_0) g(x_0)}{\Delta x}=\ldots}
@@ -181,7 +184,7 @@ $h$ в точке $x_0$.
     Тогда
     \align \nonumber
         \item 
-            f'(x_0) = \lim_{\Delta x\to 0} \frac{\Delta f(\Delta x)}{\Delta x},\longonly{\quad}
+            f'(x_0) = \lim_{\Delta x\to 0} \frac{\Delta f(\Delta x)}{\Delta x},\longonly{\quad }
         \splitem 
             g'(y_0) = \lim_{\Delta y\to 0} \frac{\Delta g(\Delta y)}{\Delta y},
     и
