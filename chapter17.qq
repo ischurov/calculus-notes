@@ -24,7 +24,7 @@
     \figure
         \img
             \style
-                padding: 2em; max-width:600px;
+                padding: 1em; max-width:600px;
             \src applications-deriv-1.svg
             \alt
                 Нарисован график функции y=f(x) и отмечена точка (x_0, f(x_0)).
@@ -47,8 +47,11 @@
         f(x_0 + \Delta x) = f(x_0) + f'(x_0) \Delta x + \alpha(\Delta x) \cdot
         \Delta x.
     Вынесем $\Delta x$ за скобку:
-    \equation \label eq:17:alpha
-        f(x_0 + \Delta x) = f(x_0) + (f'(x_0) + \alpha(\Delta x)) \Delta x.
+    \align
+        \item \label eq:17:alpha
+            & f(x_0 + \Delta x)  = f(x_0) + 
+        \splitem \splonly{ & {} +} 
+            (f'(x_0) + \alpha(\Delta x)) \Delta x.
     Поскольку $\alpha(\Delta x)\to 0$ при $\Delta x \to 0$ и по предположению
     $f'(x_0) > 0$, существует такая окрестность нуля, что для всех $\Delta x$ из
     этой окрестности, 
@@ -116,7 +119,7 @@
     \figure
         \img
             \style
-                padding: 2em; max-width:500px;
+                padding: 1em; max-width:500px;
             \src applications-deriv-2.svg
             \alt
                 Нарисован график функции y=f(x) с двумя точками локального
@@ -208,9 +211,11 @@
     (см. \ref[теорему][thm:14:bound-seg] из \ref[лекции][chap:14:cont-segment]).
     Значит у множества значений функции есть точная верхняя и точная нижняя
     грани. Обозначим их через $M$ и $m$:
-    \eq
-        M := \sup \set{f(x) \mid x \in [a, b]}, \quad
-         m := \inf \\set{f(x) \mid x \in [a, b]}.
+    \align \nonumber
+        \item
+            M & := \sup \set{f(x) \mid x \in [a, b]}, \longonly{\quad }
+        \splitem 
+            m \splonly{&} := \inf \\set{f(x) \mid x \in [a, b]}.
     Докажем, что эти верхние грани достигаются, то есть найдутся такие точки
     $x_{min}$ и $x_{max}$, что $f(x_{min})=m$ и $f(x_{max})=M$. Доказательство
     будет очень похожим на то, как доказывалась \ref[теорема об ограниченности
@@ -271,7 +276,7 @@
 \figure
     \img
         \style
-            padding: 2em; max-width:600px;
+            padding: 1em; max-width:600px;
         \src applications-deriv-3.svg
         \alt
             Нарисован график функции y=f(x) и точки a и b на горизонтальной оси
@@ -311,7 +316,7 @@
 \figure
     \img
         \style
-            padding: 2em; max-width:550px;
+            padding: 1em; max-width:550px;
         \src applications-deriv-4.svg
         \alt
             Нарисован график y=f(x), отмечены точки x=a и x=b, b>a, y=f(a) и
@@ -348,7 +353,7 @@
     \figure
         \img
             \style
-                padding: 2em; max-width:550px;
+                padding: 1em; max-width:550px;
             \src applications-deriv-5.svg
             \alt
                 Нарисован график y=f(x), отмечены точки x=a и x=b, b>a, y=f(a) и
@@ -359,8 +364,9 @@
         \label fig:17:f-h
     
     Теперь рассмотрим функцию
-    \eq
-        g(x):=f(x)-h(x)=f(x)-(x-a)\frac{f(b)-f(a)}{b-a}.
+    \align \nonumber
+        \item g(x)  := & f(x)-h(x)
+        \splitem  =\splonly{&} f(x)-(x-a)\frac{f(b)-f(a)}{b-a}.
     Эта функция показывает, насколько график $y=f(x)$ проходит выше графика
     $y=h(x)$. Таким образом, её график выглядит как скошенная версия графика
     $y=f(x)$.
@@ -394,7 +400,7 @@
     $x_2 > x_1$.
     Применим теорему Лагранжа к отрезку $[x_1, x_2]$. Получим точку $c \in [x_1,
     x_2]$, для которой верно равенство (см. \ref{eq:17:Taylor0}):
-    \equation \label 
+    \eq
         f(x_2)=f(x_1) + f'(c) (x_2 - x_1).
     По условию, $f'(c)>0$ (потому что $c \in (x_1, x_2) \subset (a, b)$ и во
     всех точках интервала $(a, b)$ производная положительна) и по предположению

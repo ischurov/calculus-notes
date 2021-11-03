@@ -612,11 +612,16 @@ $y_0$. Но $y_0=f(x_0)$. Таким образом, можно ожидать, 
             Иллюстрация к доказательству теоремы о производной обратной функции
         \label fig:18:inv-deriv-proof
     Запишем теперь предел \ref{eq:18:Dy} в следующем виде:
-    \equation \label eq:18:long
-        \lim_{\Delta y \to 0} \frac{g(y+\Delta y) - g(y)}{\Delta y} = 
-        \lim_{\Delta y \to 0} \frac{\Delta g(\Delta y)}{\Delta y}=
-        \lim_{\Delta y \to 0} \frac{1}{\frac{\Delta y}{\Delta g(\Delta y)}} =
-        \lim_{\Delta y \to 0} \frac{1}{\frac{f(x_0+\Delta g(\Delta
+    \align
+        \item \label eq:18:long
+            & \lim_{\Delta y \to 0} \frac{g(y+\Delta y) - g(y)}{\Delta y} = 
+        \splitem 
+            \splonly{& = } \lim_{\Delta y \to 0} \frac{\Delta g(\Delta y)}{\Delta y}=
+        \splitem
+            \splonly{& =} \lim_{\Delta y \to 0} \frac{1}{\frac{\Delta y}{\Delta g(\Delta y)}} =
+        \splitem 
+            \splonly{&=}
+            \lim_{\Delta y \to 0} \frac{1}{\frac{f(x_0+\Delta g(\Delta
             y))-f(x_0)}{\Delta g(\Delta y)}}=\ldots
     Рассмотрим функцию
     \eq
