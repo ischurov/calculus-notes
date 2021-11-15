@@ -216,8 +216,8 @@ $o$-малых через $T_0(x)$ и $T_1(x)$ соответственно:
 второй степени, который бы имел в точке $x_0$ такое же значение и такие же
 производные, как $f$, то есть хотим, чтобы выполнялись равенства
 \align \nonumber
-    \item T_2(x_0) \splonly{&} =f(x_0),\longonly{\quad} 
-    \splitem T_2'(x_0) \splonly{&} =f'(x_0), \longonly{\quad} 
+    \item T_2(x_0) \splonly{&} =f(x_0),\longonly{\quad } 
+    \splitem T_2'(x_0) \splonly{&} =f'(x_0), \longonly{\quad } 
     \splitem T_2''(x_0) \splonly{&} =f''(x_0).
 Как этого добиться? Пусть
 \eq
