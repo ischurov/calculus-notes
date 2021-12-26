@@ -44,9 +44,12 @@
     числа точек различия.) Пусть затронуты отрезки с номерами $k_1, \ldots,
     k_M$, $M\le 2m$. Модуль разности между интегральными суммами для функций $f$ и $g$
     равен 
-    \eq
-        \left|\sum_{i=1}^{M} f(x_{k_i}^*)-g(x_{k_i}^*) \Delta x_{k_i}\right| \le
-        \sum_{i=1}^M |f(x_{k_i}^*)-g(x_{k_i}^*)|\cdot |\Delta x_{k_i}|.
+    \gather \nonumber
+        \item 
+            \left|\sum_{i=1}^{M} f(x_{k_i}^*)-g(x_{k_i}^*) \Delta x_{k_i}\right| \le
+        \splitem
+            \splonly{\le}
+            \sum_{i=1}^M |f(x_{k_i}^*)-g(x_{k_i}^*)|\cdot |\Delta x_{k_i}|.
     Модуль разности между значениями функций $f$ и $g$ не превосходит $2C$,
     поскольку сами значения ограничены по модулю числом $C$. (Мы используем
     неравенство $|a-b|\le |a|+|b|$.) Длина отрезка разбиения $|\Delta
@@ -65,9 +68,15 @@
 \proof
     Воспользовавшись свойством аддитивности \ref{eq:24:additivity}, разобьем
     интеграл в сумму интегралов:
-    \equation \label eq:27:sumint
-        \int_a^b f(x)\, dx = \int_a^{z_1} f(x)\, dx + \int_{z_1}^{z_2} f(x)\, dx
-        + \ldots + \int_{z_{m-1}}^{z_m} f(x)\, dx + \int_{z_m}^b f(x)\, dx.
+    \align 
+        \item \label eq:27:sumint
+            \splonly{&} \int_a^b f(x)\, dx =
+            \int_a^{z_1} f(x)\, dx + 
+        \splitem \splonly{& {} + }
+            \int_{z_1}^{z_2} f(x)\, dx + \ldots + 
+        \splitem
+            \splonly{& {} + }
+            \int_{z_{m-1}}^{z_m} f(x)\, dx + \int_{z_m}^b f(x)\, dx.
     Рассмотрим любой из получившихся отрезков интегрирования, обозначим его
     концы через $\alpha$ и $\beta$. Функция $f$ непрерывна на $[\alpha, \beta]$,
     за исключением, быть может, концов отрезка. Но в концах существуют
@@ -175,9 +184,10 @@
     непрерывна на отрезке $[a, b]$.
 \proof
     Действительно, для любых точек $t, t_0 \in [a, b]$
-    \eq
-        F(t)-F(t_0) = \int_a^t f(x)\, dx - \int_a^{t_0} f(x)\, dx = \int_{t_0}^t
-        f(x)\, dx.
+    \align \nonumber
+        \item 
+            F(t)-F(t_0) \splonly{&} = \int_a^t f(x)\, dx - \int_a^{t_0} f(x)\, dx=
+        \splitem \splonly{&=} \int_{t_0}^t f(x)\, dx.
     Иными словами, разность значений $F$ в точках $t$ и $t_0$ равна интегралу от
     $f$ по отрезку $[t_0, t]$. Поскольку функция под интегралом интегрируема,
     она ограничена, и значит интеграл по маленькому отрезку от неё будет
@@ -305,11 +315,12 @@
         \label fig:27:improper1
     Попробуем найти, что получится. Заметим, что первообразной $1/x^2$ является
     $(-1/x)$. Воспользуемся формулой Ньютона — Лейбница:
-    \eq
-        \lim_{t\to +\infty} \int_1^t
-        \frac{1}{x^2}\, dx = \lim_{t\to +\infty}
-        \left.\left(-\frac{1}{x}\right)\right|_{1}^t=\lim_{t\to +\infty}
-        \left(-\frac{1}{t}-\left(-\frac{1}{1}\right)\right)=1.
+    \gather \nonumber
+        \item 
+            \lim_{t\to +\infty} \int_1^t \frac{1}{x^2}\, dx  = 
+            \lim_{t\to +\infty} \left.\left(-\frac{1}{x}\right)\right|_{1}^t=
+        \splitem \splonly{=}
+            \lim_{t\to +\infty} \left(-\frac{1}{t}-\left(-\frac{1}{1}\right)\right)=1.
     Получилось! Искомая площадь равна $1$.
 
 \definition
@@ -338,10 +349,14 @@
     Действуя так же, как и раньше, запишем этот интеграл в виде предела.
     Напомним, что первообразная $1/x$ при положительных $x$ — это $\ln x$.
     Имеем:
-    \eq
-        \int_{1}^{+\infty} \frac{1}{x}\, dx := \lim_{t\to +\infty} \int_{1}^{t}
-        \frac{1}{x}\, dx = \lim_{t\to +\infty} \ln x|_{1}^t=\lim_{t\to +\infty}
-        (\ln t - \ln 1) = +\infty.
+    \align \nonumber
+        \item 
+            \int_{1}^{+\infty} \frac{1}{x}\, dx   :=\splonly{&} \lim_{t\to +\infty} \int_{1}^{t}
+            \frac{1}{x}\, dx = 
+        \splitem \splonly{=&}
+            \lim_{t\to +\infty} \ln x|_{1}^t=
+        \splitem \splonly{=&}
+            \lim_{t\to +\infty} (\ln t - \ln 1) = +\infty.
 
 \definition
     Если предел в определении несобственного интеграла существует, говорят, что
@@ -441,10 +456,14 @@
         \int_{1}^{+\infty} e^{-x}\, dx
     сходится, то и наш интеграл сходится. Но $e^{-x}$ легко проинтегрировать
     явно: первообразная равна $(-e^{-x})$. Таким образом,
-    \eq
-        \int_{1}^{+\infty} e^{-x}\, dx = \lim_{t\to +\infty} \int_1^{t}
-        e^{-x}\, dx = \lim_{t\to +\infty} (-e^{-x})|_1^t=\lim_{t\to +\infty}
-        (-e^{-t}-(-e^{-1}))=\frac{1}{e}.
+    \align \nonumber
+        \item
+            \int_{1}^{+\infty} e^{-x}\, dx \splonly{&} = \lim_{t\to +\infty} \int_1^{t}
+            e^{-x}\, dx = 
+        \splitem \splonly{&=}
+            \lim_{t\to +\infty} (-e^{-x})|_1^t=
+        \splitem \splonly{&=}
+            \lim_{t\to +\infty} (-e^{-t}-(-e^{-1}))=\frac{1}{e}.
     Мы нашли этот интеграл явно, значит, он сходится, и значит наш исходный
     интеграл тоже сходится.
     
@@ -506,10 +525,14 @@ $\int_a^{+\infty} g(x)\, dx$ сходится, то и $\int_{a}^{+\infty} f(x)\
     в виде $x^{-1/2}$, а все степенные функции мы имеем интегрировать.
     Первообразная имеет вид $2x^{1/2}=2\sqrt{x}$ (проверьте
     дифференцированием!) и значит
-    \eq
-        \int_0^1 \frac{1}{\sqrt{x}} \, dx := \lim_{t\to 0^+} \int_t^1
-        \frac{1}{\sqrt{x}}\, dx = \lim_{t \to 0^+}
-        2\sqrt{x}|_t^1=\lim_{t \to 0^+} (2\sqrt{1}-2\sqrt{t}) = 2.
+    \align \nonumber
+        \item 
+            \int_0^1 \frac{1}{\sqrt{x}} \, dx := 
+            \splonly{&} \lim_{t\to 0^+} \int_t^1 \frac{1}{\sqrt{x}}\, dx = 
+        \splitem \splonly{=&}
+            \lim_{t \to 0^+} 2\sqrt{x}|_t^1=
+        \splitem \splonly{=&}
+            \lim_{t \to 0^+} (2\sqrt{1}-2\sqrt{t}) = 2.
     Интеграл сошёлся, ура!
 
 \definition \label def:27:leftsing
@@ -532,11 +555,13 @@ $\int_a^{+\infty} g(x)\, dx$ сходится, то и $\int_{a}^{+\infty} f(x)\
     Мы уже считали интеграл от этой функции, но по другой области — по
     бесконечному промежутку $[1, +\infty)$ — и он сошёлся. Может быть, и в этот
     раз нам повезёт?
-    \eq
-        \int_0^1 \frac{1}{x^2}\,dx = \lim_{t\to 0^+} \int_t^1 \frac{1}{x^2} \,
-        dx = \lim_{t\to 0+}
-        \left.\left(-\frac{1}{x}\right)\right|_{t}^1=\lim_{t\to 0^+}
-        \left(-\frac{1}{1}+\frac{1}{t}\right)=+\infty.
+    \align \nonumber
+        \item
+            \int_0^1 \frac{1}{x^2}\,dx \splonly{&}=\lim_{t\to 0^+} \int_t^1 \frac{1}{x^2} \, dx = 
+        \splitem \splonly{&=}
+            \lim_{t\to 0+} \left.\left(-\frac{1}{x}\right)\right|_{t}^1=
+        \splitem \splonly{&=}
+            \lim_{t\to 0^+} \left(-\frac{1}{1}+\frac{1}{t}\right)=+\infty.
     Увы, этот интеграл расходится. 
 
     Почему такая разница с функцией $1/\sqrt{x}$?  Дело в том, что $\sqrt{x}$
@@ -599,14 +624,18 @@ $\int_a^{+\infty} g(x)\, dx$ сходится, то и $\int_{a}^{+\infty} f(x)\
     Пусть у функции $f$ бесконечные разрывы в точках $2$, $5$ и $7$, и мы хотим
     посчитать от неё интеграл по всей числовой прямой. Его следует представить в
     таком виде:
-    \multline \nonumber
+    \gather \nonumber
         \item 
             \int_{-\infty}^{\infty} f(x)\, dx = 
-                \int_{-\infty}^{1} f(x)\, dx + \int_{1}^{2} f(x)\, dx + 
-                \int_{2}^{4} f(x)\, dx + \int_{4}^{5} f(x)\, dx + 
+        \splitem \splonly{=}
+            \int_{-\infty}^{1} f(x)\, dx + 
+            \int_{1}^{2} f(x)\, dx +
+        \splitem \splonly{{} +} \int_{2}^{4} f(x)\, dx + 
+            \int_{4}^{5} f(x)\, dx + 
         \item 
-            + \int_{5}^{6} f(x)\, dx + \int_{6}^{7} f(x)\, dx 
-            + \int_{7}^{10} f(x)\, dx + \int_{10}^{+\infty} f(x)\, dx.  
+            {} + \int_{5}^{6} f(x)\, dx + \int_{6}^{7} f(x)\, dx 
+        \splitem \splonly{{} +}
+            \int_{7}^{10} f(x)\, dx + \int_{10}^{+\infty} f(x)\, dx.  
     Каждый из получившихся интегралов — один из несобственных интегралов,
     которые мы обсуждали. Промежуточные точки $1$, $4$, $6$, $10$ выбраны
     произвольным образом — можно выбрать какие-то другие точки, лежаще на тех же
