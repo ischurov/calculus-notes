@@ -133,7 +133,7 @@ c)$. Тогда $f(x_1)=c$ и стало быть $f^{-1}(c)=x_1$. Таким о
         \item 
             \tilde f\colon [0, +\infty) \to \mathbb R,
         \item 
-            \forall x \in [0, +\infty)\colon \tilde f(x) = g(x).
+            \forall x \in [0, +\infty)\colon \tilde f(x) = f(x).
     Обозначают $\tilde f = f|_{[0, +\infty)}$.
     Графиком $\tilde f$ будет правая ветвь параболы (см. тот же рисунок,
     справа), и, в отличие от исходной функции $f$, функция $\tilde f$ является
