@@ -61,7 +61,7 @@
 \align \nonumber
     \item 
         \splonly{&} I_k = [x_{k-1}, x_k],\longonly{\quad}
-    \splitem \splonly{&} \Delta X_k  = x_{k}-x_{k-1}, \longonly{\quad} 
+    \splitem \splonly{&} \Delta x_k  = x_{k}-x_{k-1}, \longonly{\quad} 
     \splitem \splonly{&} k  = 1, \ldots, n,
 то есть $I_k$ — это $k$-й отрезок разбиения, $\Delta x_k$ — его длина.
 
