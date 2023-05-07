@@ -629,7 +629,7 @@ $z$, при это оказалась равной $(-1)$. Хотя начина
 
 \gather
     \item \label eq:29:quadr
-        z_1 = 0, \quad z_{n+1}=z_n^2 + c, \longonly{\quad} 
+        z_1 = 0, \quad z_{n+1}=z_n^2 + c, \longonly{\quad } 
     \splitem n = 1, 2, \ldots
 Например, $z_2=c$, $z_3 = c^2+c$, $z_4=(c^2+c)^2+c$ и т.д.
 
